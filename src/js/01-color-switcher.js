@@ -23,5 +23,3 @@ function onStopBtnClick() {
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
-const buttonStyle = document.querySelector('[button]');
-buttonStyle.body.p.button.style.color = '#FFFFFF';
