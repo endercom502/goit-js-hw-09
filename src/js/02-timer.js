@@ -6,6 +6,7 @@ const currentDate = Date.now();
 const refs = {
   futureTimeInput: document.querySelector('#datetime-picker'),
   startBtn: document.querySelector('[data-start]'),
+  timerDays: document.querySelector('[data-days]'),
   timerHours: document.querySelector('[data-hours]'),
   timeMinutes: document.querySelector('[data-minutes]'),
   timerSeconds: document.querySelector('[data-seconds]'),
