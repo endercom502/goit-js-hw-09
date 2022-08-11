@@ -8,9 +8,9 @@ const refs = {
 };
 
 Notify.init({
-  width: '280px',
+  width: '180px',
   position: 'right-top', // 'right-top' - 'right-bottom' - 'left-top' - 'left-bottom' - 'center-top' - 'center-bottom' - 'center-center'
-  distance: '10px',
+  distance: '20px',
   opacity: 1,
   borderRadius: '5px',
   rtl: false,
@@ -75,20 +75,22 @@ class PromiseCycle {
         });
     }
   }
+
   createPromise(position, delay) {
     const promise = new Promise((resolve, reject) => {
       const shouldResolve = Math.random() > 0.3;
       setTimeout(() => {
         if (shouldResolve) {
-          resolve(`Fulfilled promise ${position} in ${delay}ms`);
+          resolve(`✅ Fulfilled promise ${position} in ${delay}ms`);
         } else {
-          reject(`Rejected promise ${position} in ${delay}ms`);
+          reject(`❌ Rejected promise ${position} in ${delay}ms`);
         }
       }, delay);
     });
     return promise;
   }
 }
+
 function promiseArgsLauch() {
   newPromise.promiseCycle(
     refs.amount.value,
@@ -96,7 +98,9 @@ function promiseArgsLauch() {
     refs.stepInput.value
   );
 }
+
 const newPromise = new PromiseCycle({
   notify: Notify,
 });
+
 refs.submitBtn.addEventListener('click', promiseArgsLauch);
