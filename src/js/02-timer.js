@@ -1,6 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import { Nofify } from 'notiflix/build/notiflix-Notify-aio';
+// import { Nofify } from 'notiflix/build/notiflix-Notify-aio';
 const currentDate = Date.now();
 
 const refs = {
